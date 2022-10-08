@@ -31,7 +31,7 @@ class Coefficients:
         ]
 
     def __init__(self, year: int):
-        """Verify we cover the year requested and if covered load the coefficients."""
+        """Initialize the mode from file in case it covers the requested year."""
         if year not in self.years_covered:
             raise ValueError(f'requested year ({year}) not within {self.years_covered}')
 
