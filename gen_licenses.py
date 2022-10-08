@@ -48,7 +48,6 @@ def _generate_dependency_information() -> None:
 
     indirect_names = [  # TODO(sthagen) these indirect deps may diverge ...
         'click',
-        'typing-extensions',
     ]
     full_vector = [
         'pip-licenses', '--format', 'json', '-p', *direct_names, *indirect_names,
