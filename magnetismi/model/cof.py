@@ -19,10 +19,10 @@ class Coefficients:
         with open(STORE_PATH / f'wmm-{model_year}.txt', 'rt', encoding=ENCODING) as handle:
             recs = [line.strip().split() for line in handle if line.strip() and line.strip() != TWIN_END_TOKEN]
 
-        epoc, model, modeldate = recs[0]
+        epoc, model, model_date_string = recs[0]
         self.model['epoch'] = float(epoc)
         self.model['model_code'] = model
-        self.model['model_date_string'] = modeldate
+        self.model['model_date_string'] = model_date_string
 
         self.model['coeffs'] = [
             {c: int(r[s]) if c in ('n', 'm') else float(r[s]) for s, c in enumerate(CS)}
