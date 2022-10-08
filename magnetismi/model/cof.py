@@ -30,7 +30,7 @@ class Coefficients:
         self.modeldate = modeldate
 
         self.data = [
-            {c: float(r[s]) if c not in ('n', 'm') else int(r[s]) for s, c in enumerate(CS)}
+            {c: int(r[s]) if c in ('n', 'm') else float(r[s]) for s, c in enumerate(CS)}
             for r in recs[1:]
             if len(r) == len(CS)
         ]
