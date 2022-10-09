@@ -1,10 +1,11 @@
 """Adapted from C code as distributed per https://www.ngdc.noaa.gov/geomag/WMM/DoDWMM.shtml."""
-
+import argparse
 import datetime as dti
+import logging
 import math
 from dataclasses import dataclass
 
-from magnetismi import ABS_LAT_DD_ANY_ARCITC, DEFAULT_MAG_VAR, FEET_TO_KILOMETER, fractional_year_from_date
+from magnetismi import ABS_LAT_DD_ANY_ARCITC, DEFAULT_MAG_VAR, FEET_TO_KILOMETER, fractional_year_from_date, log
 from magnetismi.model.cof import MODEL_FROM_YEAR, YEARS_COVERED, Coefficients
 
 
@@ -159,3 +160,32 @@ class Model:
         return MagneticVector(
             dec=dec, dip=dip, ti=ti, bh=bh, bx=bx, by=by, bz=bz, lat=lat_dd, lon=lon_dd, alt=alt_ft, time=time
         )
+
+def calc(options: argparse.Namespace) -> int:
+    """Drive the calculation."""
+    quiet = options.quiet
+    verbose = options.verbose
+    if quiet:
+        logging.getLogger().setLevel(logging.ERROR)
+    elif verbose:
+        logging.getLogger().setLevel(logging.DEBUG)
+    lat_dd = options.lat_dd
+    lon_dd = options.lon_dd
+    alt_ft = options.alt_ft
+    date = options.date_in
+    start_time = dti.datetime.now(tz=dti.timezone.utc)
+    log.info(f'starting calculation at {date} for {alt_ft=}, {lat_dd=}, and {lon_dd=}')
+    model = Model(date.year)
+    log.info(f'- fetched model with id {model.coefficients.model["model_id"]} ')
+    data = model.at(lat_dd=lat_dd, lon_dd=lon_dd, alt_ft=alt_ft, date=date)
+    log.info(f'- result for {data.time=}, {data.alt=}, {data.lat=}, and {data.lon=}:')
+    log.info(f'  Declination D = {data.dec}, inclination I = {data.dip} in degrees')
+    log.info(f'  North X = {data.bx}, East Y = {data.by}, Down Z = {data.bz} component in nT')
+    log.info(f'  Horizontal H = {data.bh}, total T = {data.ti} intensity in nT')
+    if quiet:
+        print(
+            f'time={data.time}, alt={data.alt}, lat={data.lat}, long={data.lon}, D={data.dec}, I={data.dip}, X={data.bx}, Y={data.by}, Z={data.bz}, H={data.bh}, T={data.ti}'
+        )
+    end_time = dti.datetime.now(tz=dti.timezone.utc)
+    log.info(f'calculation complete after {(end_time - start_time).total_seconds()} seconds')
+    return 0
