@@ -4,7 +4,7 @@ import datetime as dti
 import math
 from dataclasses import dataclass
 
-from magnetismi import ABS_LAT_DD_ANY_ARCITC, DEFAULT_MAG_VAR, FEET_TO_KILOMETER
+from magnetismi import ABS_LAT_DD_ANY_ARCITC, DEFAULT_MAG_VAR, FEET_TO_KILOMETER, fractional_year_from_date
 from magnetismi.model.cof import MODEL_FROM_YEAR, YEARS_COVERED, Coefficients
 
 
@@ -35,7 +35,7 @@ class Model:
         if date.year not in YEARS_COVERED or self.coefficients.model['model_id'] != MODEL_FROM_YEAR[date.year]:
             raise ValueError(f'Model ID ({self.coefficients.model["model_id"]}) is not covering year ({date.year})')
 
-        time = date.year + ((date - dti.date(date.year, 1, 1)).days / 365.0)  # date('Y') + date('z')/365
+        time = fractional_year_from_date(date)  # date('Y') + date('z')/365
         alt = alt_ft * FEET_TO_KILOMETER
 
         model = self.coefficients.model
