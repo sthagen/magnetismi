@@ -6,6 +6,7 @@ from typing import List, Union
 
 import magnetismi.magnetismi as api
 from magnetismi import APP_ALIAS, APP_NAME, date_from_fractional_year
+from magnetismi.model.cof import YEARS_COVERED
 
 DATE_FORMAT = '%Y-%m-%d'
 
@@ -34,7 +35,7 @@ def parse_request(argv: List[str]) -> Union[int, argparse.Namespace]:
         dest='alt_ft',
         type=float,
         default=0,
-        help='altitude in feet. Optional\n(default: 0)',
+        help='altitude in feet inside [-3280.84, +2788714]. Optional (default: 0)',
     )
     parser.add_argument(
         '--date',
@@ -110,6 +111,15 @@ def parse_request(argv: List[str]) -> Union[int, argparse.Namespace]:
                     )
         else:
             options.date_in = dti.date.today()
+
+    if options.date_in.year not in YEARS_COVERED:
+        parser.error(f'requested year ({options.date_in.year}) is outside of {YEARS_COVERED}')
+
+    if not -3280.84 <= options.alt_ft <= 2788714.0:
+        parser.error(
+            f'requested altitude ({options.alt_ft}) is outside of [-3280.84, +2788714] feet'
+            ' and the model is only valid between the corresponding [-1, +850] km'
+        )
 
     if not -90 <= options.lat_dd <= 90:
         parser.error(f'requested latitude ({options.lat_dd}) is outside of [-90, +90] degrees')
