@@ -183,9 +183,8 @@ def calc(options: argparse.Namespace) -> int:
     log.info(f'  Declination D = {data.dec}, inclination I = {data.dip} in degrees')
     log.info(f'  North X = {data.bx}, East Y = {data.by}, Down Z = {data.bz} component in nT')
     log.info(f'  Horizontal H = {data.bh}, total T = {data.ti} intensity in nT')
-    if quiet:
-        print(f'INP(time={data.time}, alt={data.alt}, lat={data.lat}, long={data.lon})')
-        print(f'OUT(D={data.dec}, I={data.dip}, X={data.bx}, Y={data.by}, Z={data.bz}, H={data.bh}, T={data.ti})')
     end_time = dti.datetime.now(tz=dti.timezone.utc)
     log.info(f'calculation complete after {(end_time - start_time).total_seconds()} seconds')
+    print(f'INP(time={data.time}, alt={data.alt}, lat={data.lat}, long={data.lon})')
+    print(f'OUT(D={data.dec}, I={data.dip}, X={data.bx}, Y={data.by}, Z={data.bz}, H={data.bh}, T={data.ti})')
     return 0
