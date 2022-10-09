@@ -38,8 +38,11 @@ Test-Coverage = "https://codes.dilettant.life/coverage/magnetismi"
 magnetismi = "magnetismi.cli:main"
 
 [tool.setuptools.packages.find]
-include = ["magnetismi"]
+include = ["magnetismi", "magnetismi.model"]
 exclude = ["test*"]
+
+[tool.setuptools.package-data]
+magnetismi = ["*.txt", "*.txt.sha256", "*.txt.sha512"]
 
 [bdist_wheel]
 universal = true
