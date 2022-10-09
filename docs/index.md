@@ -12,6 +12,12 @@ Magnetism (Finnish: magnetismi) - another opinionated World Magnetic Model calcu
 
 ## Model
 
+### References 
+
+\[WMM20]
+:    "The US/UK World Magnetic Model for 2020-2025: Technical Report", Personal Author(s) : Chulliat, A.;W. Brown;P. Alken;C. Beggan;M. Nair;G. Cox;A. Woods;S. Macmillan;B. Meyer;M. Paniccia; 
+Corporate Authors(s) : National Centers for Environmental Information (U.S.);British Geological Survey; Published Date : 2020, DOI : https://doi.org/10.25923/ytk1-yx35
+
 ### Interface to the Source Data
 
 The mode in use is the current World Magnetic Model from 2020 \[[WMM20](https://www.ngdc.noaa.gov/geomag/WMM/data/WMM2020/WMM2020_Report.pdf)\] with is considered valid through 2025. 
