@@ -1,3 +1,4 @@
+import importlib.resources
 import math
 import pathlib
 
@@ -18,8 +19,10 @@ class Coefficients:
 
     def load(self, model_year: int) -> None:
         """Load the model."""
-        with open(STORE_PATH / f'wmm-{model_year}.txt', 'rt', encoding=ENCODING) as handle:
-            recs = [line.strip().split() for line in handle if line.strip() and line.strip() != TWIN_END_TOKEN]
+        model_resource = f'wmm-{model_year}.txt'
+        with importlib.resources.path(__package__, model_resource) as model_path:
+            with open(model_path, 'rt', encoding=ENCODING) as handle:
+                recs = [line.strip().split() for line in handle if line.strip() and line.strip() != TWIN_END_TOKEN]
 
         epoc, model, model_date_string = recs[0]
         self.model['epoch'] = float(epoc)
