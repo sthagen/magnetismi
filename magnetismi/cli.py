@@ -1,7 +1,6 @@
 """Command line interface for splice (Finnish liitos) contributions."""
 import argparse
 import datetime as dti
-import pathlib
 import sys
 from typing import List, Union
 
@@ -41,14 +40,20 @@ def parse_request(argv: List[str]) -> Union[int, argparse.Namespace]:
         '--date',
         dest='date',
         default='',
-        help='date for magentic calculation in YYYY-mm-dd format. Optional\n(default: positional date value)',
+        help=(
+            'date for magentic calculation in YYYY-mm-dd or fractional year decimal format.'
+            ' Optional\n(default: positional date value)'
+        ),
         required=False,
     )
     parser.add_argument(
         'date_pos',
         nargs='?',
         default='',
-        help='date for magentic calculation in YYYY-mm-dd format. Optional\n(default: empty for current date)',
+        help=(
+            'date for magentic calculation in YYYY-mm-dd or fractional year decimal format.'
+            ' Optional\n(default: empty for current date)'
+        ),
     )
     parser.add_argument(
         '--quiet',
@@ -76,18 +81,33 @@ def parse_request(argv: List[str]) -> Union[int, argparse.Namespace]:
         parser.error('you cannot be quiet and verbose at the same time')
 
     if options.date:
-        try:
-            options.date_in = dti.datetime.strptime(options.date, DATE_FORMAT).date()
-        except ValueError as err:
-            parser.error(f'requested date ({options.date}) does not parse as YYYY-mm-dd; error: {err}')
+        if '-' in options.date:
+            try:
+                options.date_in = dti.datetime.strptime(options.date, DATE_FORMAT).date()
+            except ValueError as err:
+                parser.error(f'requested date ({options.date}) does not parse as YYYY-mm-dd; error: {err}')
+        else:
+            try:
+                options.date_in = date_from_fractional_year(float(options.date))
+            except ValueError as err:
+                parser.error(f'requested date ({options.date}) does not parse as decimal fractional year; error: {err}')
     else:
         if options.date_pos:
-            try:
-                options.date_in = dti.datetime.strptime(options.date_pos, DATE_FORMAT).date()
-            except ValueError as err:
-                parser.error(
-                    f'requested (positional) date ({options.date_pos}) does not parse as YYYY-mm-dd; error: {err}'
-                )
+            if '-' in options.date_pos:
+                try:
+                    options.date_in = dti.datetime.strptime(options.date_pos, DATE_FORMAT).date()
+                except ValueError as err:
+                    parser.error(
+                        f'requested (positional) date ({options.date_pos}) does not parse as YYYY-mm-dd; error: {err}'
+                    )
+            else:
+                try:
+                    options.date_in = date_from_fractional_year(float(options.date_pos))
+                except ValueError as err:
+                    parser.error(
+                        f'requested (positional) date ({options.date_pos})'
+                        f' does not parse as decimal fractional year; error: {err}'
+                    )
         else:
             options.date_in = dti.date.today()
 
