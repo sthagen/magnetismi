@@ -4,10 +4,8 @@ import datetime as dti
 import math
 from dataclasses import dataclass
 
-from magnetismi import ABS_LAT_DD_ANY_ARCITC, DEFAULT_MAG_VAR
+from magnetismi import ABS_LAT_DD_ANY_ARCITC, DEFAULT_MAG_VAR, FEET_TO_KILOMETER
 from magnetismi.model.cof import MODEL_FROM_YEAR, YEARS_COVERED, Coefficients
-
-FEET_TO_KILOMETER = 1.0 / 3280.8399
 
 
 @dataclass
