@@ -22,6 +22,6 @@ the declination at that date (start of 2020) and two years later:
 >>> field_point = model.at(lat_dd=89, lon_dd=-121, alt_ft=alt_ft, date=date)
 >>> field_point.dec
 -112.40998916672564
->>> field_point.dec
--107.15773983508477
+>>> field_point.dip
+88.45768418656999
 ```
