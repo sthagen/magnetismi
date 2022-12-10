@@ -3,6 +3,8 @@ site_description: "Magnetism (Finnish: magnetismi) - another opinionated World M
 
 theme:
   name: 'material'
+  logo: assets/logo.png
+  favicon: images/favicon.ico
   features:
     - navigation.expand
     - toc.integrate
