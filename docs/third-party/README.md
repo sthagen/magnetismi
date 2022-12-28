@@ -1,8 +1,8 @@
 # Third Party Dependencies
 
 <!--[[[fill sbom_sha256()]]]-->
-The [SBOM in CycloneDX v1.4 JSON format](https://github.com/sthagen/pilli/blob/default/sbom.json) with SHA256 checksum ([0c6d7d56 ...](https://raw.githubusercontent.com/sthagen/pilli/default/sbom.json.sha256 "sha256:0c6d7d56eca6d720a1d88d8cc254e39f2463c55197b7e1d60ac893f67c0195e1")).
-<!--[[[end]]] (checksum: 453509ea1a2a86f98dd8ffcc4b330344)-->
+The [SBOM in CycloneDX v1.4 JSON format](https://git.sr.ht/~sthagen/magnetismi/blob/default/sbom.json) with SHA256 checksum ([8b89ffe7 ...](https://git.sr.ht/~sthagen/magnetismi/blob/default/sbom.json.sha256 "sha256:8b89ffe730f978ba40e4cdadc4a192fe72db78f63bd58f4f6dfe636174bfc847")).
+<!--[[[end]]] (checksum: 25ebfccdb83cbf2ab7e9237538571101)-->
 ## Licenses 
 
 JSON files with complete license info of: [direct dependencies](direct-dependency-licenses.json) | [all dependencies](all-dependency-licenses.json)
@@ -13,8 +13,8 @@ JSON files with complete license info of: [direct dependencies](direct-dependenc
 | Name                                       | Version                                        | License     | Author            | Description (from packaging data)                                  |
 |:-------------------------------------------|:-----------------------------------------------|:------------|:------------------|:-------------------------------------------------------------------|
 | [PyYAML](https://pyyaml.org/)              | [6.0](https://pypi.org/project/PyYAML/6.0/)    | MIT License | Kirill Simonov    | YAML parser and emitter for Python                                 |
-| [typer](https://github.com/tiangolo/typer) | [0.6.1](https://pypi.org/project/typer/0.6.1/) | MIT License | Sebastián Ramírez | Typer, build great CLIs. Easy to code. Based on Python type hints. |
-<!--[[[end]]] (checksum: 2cbd9167abfa69505798af7ad0916e5c)-->
+| [typer](https://github.com/tiangolo/typer) | [0.7.0](https://pypi.org/project/typer/0.7.0/) | MIT License | Sebastián Ramírez | Typer, build great CLIs. Easy to code. Based on Python type hints. |
+<!--[[[end]]] (checksum: 7ea1d51e800d9cdc2f6df676ae1f50de)-->
 
 ### Indirect Dependencies
 
@@ -39,7 +39,7 @@ Base graphviz file in dot format: [Trees of the direct dependencies](package-dep
 <!--[[[fill dependency_tree_console_text()]]]-->
 ````console
 PyYAML==6.0
-typer==0.6.1
+typer==0.7.0
   - click [required: >=7.1.1,<9.0.0, installed: 8.1.3]
 ````
-<!--[[[end]]] (checksum: 02796995333dbf7df09e445adae7be69)-->
+<!--[[[end]]] (checksum: fb8a9deeb3eb15f126bd258693d0e6c0)-->
