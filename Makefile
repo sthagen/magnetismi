@@ -1,7 +1,6 @@
 .DEFAULT_GOAL := all
 black = black -S -l 120 --target-version py310 magnetismi test
-flake8 = flake8 magnetismi test
-isort = isort magnetismi test
+lint = ruff magnetismi test
 pytest = pytest --asyncio-mode=strict --cov=magnetismi --cov-report term-missing:skip-covered --cov-branch --log-format="%(levelname)s %(message)s"
 types = mypy magnetismi
 
@@ -17,7 +16,7 @@ install-all: install
 
 .PHONY: format
 format:
-	$(isort)
+	$(lint) --fix
 	$(black)
 
 .PHONY: init
@@ -28,13 +27,12 @@ init:
 .PHONY: lint
 lint:
 	python setup.py check -ms
-	$(flake8)
-	$(isort) --check-only --df
+	$(lint) --diff
 	$(black) --check --diff
 
 .PHONY: types
 types:
-	$(mypy)
+	$(types)
 
 .PHONY: test
 test: clean
