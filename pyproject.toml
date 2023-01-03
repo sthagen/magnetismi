@@ -44,9 +44,6 @@ exclude = ["test*"]
 [tool.setuptools.package-data]
 magnetismi = ["*.txt", "*.txt.sha256", "*.txt.sha512"]
 
-[bdist_wheel]
-universal = true
-
 [tool.black]
 line-length = 120
 skip-string-normalization = true
