@@ -20,16 +20,16 @@ format:
 	$(lint) --fix
 	$(black)
 
-.PHONY: init
-init:
-	pip install -r test/requirements.txt
-	pip install -r test/requirements-dev.txt
-
 .PHONY: lint
 lint:
 	validate-pyproject pyproject.toml
 	$(lint) --diff
 	$(black) --check --diff
+
+.PHONY: init
+init:
+	pip install -r test/requirements.txt
+	pip install -r test/requirements-dev.txt
 
 .PHONY: types
 types:
