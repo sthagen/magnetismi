@@ -4,7 +4,7 @@ Magnetism (Finnish: magnetismi) - another opinionated World Magnetic Model calcu
 
 [License: MIT](https://git.sr.ht/~sthagen/magnetismi/tree/default/item/LICENSE)
 
-Third party dependencies are documented in the folder [third-party](third-party/README.md).
+Third party dependencies are documented in the folder [third-party](docs/third-party/README.md).
 
 [![version](https://img.shields.io/pypi/v/magnetismi.svg?style=flat)](https://pypi.python.org/pypi/magnetismi/)
 [![downloads](https://pepy.tech/badge/magnetismi/month)](https://pepy.tech/project/magnetismi)
