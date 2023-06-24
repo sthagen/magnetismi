@@ -1,8 +1,8 @@
 # Third Party Dependencies
 
 <!--[[[fill sbom_sha256()]]]-->
-The [SBOM in CycloneDX v1.4 JSON format](https://git.sr.ht/~sthagen/magnetismi/blob/default/sbom.json) with SHA256 checksum ([7add661d ...](https://git.sr.ht/~sthagen/magnetismi/blob/default/sbom.json.sha256 "sha256:7add661d9f1aefdfaeaae020ff69ecf9d5f4ae11a9e3a89f9d9947169fba3aa9")).
-<!--[[[end]]] (checksum: 97fba9499c2d489084c4d539779bbc43)-->
+The [SBOM in CycloneDX v1.4 JSON format](https://git.sr.ht/~sthagen/magnetismi/blob/default/sbom/cdx.json) with SHA256 checksum ([090821e5 ...](https://git.sr.ht/~sthagen/magnetismi/blob/default/sbom/cdx.json.sha256 "sha256:090821e5a49da13038332e2f706c000874f331f9e3c9140bfb57f8bcdafc75b0")).
+<!--[[[end]]] (checksum: b14173105848ce59a7e5c2182aafbf65)-->
 ## Licenses 
 
 JSON files with complete license info of: [direct dependencies](direct-dependency-licenses.json) | [all dependencies](all-dependency-licenses.json)
@@ -40,6 +40,6 @@ Base graphviz file in dot format: [Trees of the direct dependencies](package-dep
 ````console
 PyYAML==6.0
 typer==0.7.0
-  - click [required: >=7.1.1,<9.0.0, installed: 8.1.3]
+└── click [required: >=7.1.1,<9.0.0, installed: 8.1.3]
 ````
-<!--[[[end]]] (checksum: fb8a9deeb3eb15f126bd258693d0e6c0)-->
+<!--[[[end]]] (checksum: ab998e1d339d7d13d4f5b5a4ba18099b)-->
