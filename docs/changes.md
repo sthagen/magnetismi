@@ -1,10 +1,8 @@
-# Change History
+# Changes
 
-## 2022.10.9
-
-* Extended usage docs
+2022.10.9
+:    * Extended usage docs
 * Fixed resource loading
 
-## 2022.10.8
-
-* Initial release on PyPI
+2022.10.8
+:    * Initial release on PyPI
