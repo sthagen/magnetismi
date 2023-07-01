@@ -1,3 +1,4 @@
+"""Magnetism (Finnish: magnetismi) - another opinionated World Magnetic Model calculator."""
 import calendar
 import datetime as dti
 import logging
@@ -15,18 +16,19 @@ __all__: List[str] = []
 
 ABS_LAT_DD_ANY_ARCITC = 55.0
 
-APP_NAME = 'Magnetism (Finnish: magnetismi) - another opinionated World Magnetic Model calculator.'
-APP_ALIAS = 'magnetismi'
-APP_ENV = 'MAGNETISMI'
+APP_ALIAS = str(pathlib.Path(__file__).parent.name)
+APP_ENV = APP_ALIAS.upper()
+APP_NAME = locals()['__doc__']
 DEBUG = bool(os.getenv(f'{APP_ENV}_DEBUG', ''))
 VERBOSE = bool(os.getenv(f'{APP_ENV}_VERBOSE', ''))
 QUIET = False
 STRICT = bool(os.getenv(f'{APP_ENV}_STRICT', ''))
-DEFAULT_MAG_VAR = -999.0
 ENCODING = 'utf-8'
 ENCODING_ERRORS_POLICY = 'ignore'
+DEFAULT_CONFIG_NAME = f'.{APP_ALIAS}.json'
+
+DEFAULT_MAG_VAR = -999.0
 FEET_TO_KILOMETER = 1.0 / 3280.8399
-DEFAULT_CONFIG_NAME = '.magnetismi.json'
 DEFAULT_LF_ONLY = 'YES'
 log = logging.getLogger()  # Module level logger is sufficient
 LOG_FOLDER = pathlib.Path('logs')
