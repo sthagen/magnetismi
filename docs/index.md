@@ -11,6 +11,7 @@ Third party dependencies are documented in the folder [third-party](third-party/
 [![wheel](https://img.shields.io/pypi/wheel/magnetismi.svg?style=flat)](https://pypi.python.org/pypi/magnetismi/)
 [![supported-versions](https://img.shields.io/pypi/pyversions/magnetismi.svg?style=flat)](https://pypi.python.org/pypi/magnetismi/)
 [![supported-implementations](https://img.shields.io/pypi/implementation/magnetismi.svg?style=flat)](https://pypi.python.org/pypi/magnetismi/)
+[![maintenance-status](https://img.shields.io/github/commit-activity/y/sthagen/magnetismi.svg?style=flat)](https://git.sr.ht/~sthagen/magnetismi/log)
 
 ## Model
 
