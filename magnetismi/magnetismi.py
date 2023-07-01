@@ -4,6 +4,7 @@ import datetime as dti
 import logging
 import math
 from dataclasses import dataclass
+from typing import no_type_check
 
 from magnetismi import ABS_LAT_DD_ANY_ARCITC, DEFAULT_MAG_VAR, FEET_TO_KILOMETER, fractional_year_from_date, log
 from magnetismi.model.cof import MODEL_FROM_YEAR, YEARS_COVERED, Coefficients
@@ -31,6 +32,7 @@ class Model:
         """Maybe."""
         self.coefficients = Coefficients(year)
 
+    @no_type_check
     def at(self, lat_dd: float, lon_dd: float, alt_ft: float = 0.0, date: dti.date = dti.date.today()):
         """Get the values at ..."""
         if date.year not in YEARS_COVERED or self.coefficients.model['model_id'] != MODEL_FROM_YEAR[date.year]:
@@ -84,7 +86,6 @@ class Model:
             m = 0
             D4 = n + m + 1  # (n+m+D3)/D3 with D3 = 1
             while D4 > 0:  # for (m=0,D3=1,D4=(n+m+D3)/D3;D4>0;D4--,m+=D3):
-
                 # Compute unnormalized associated Legendre polynomials and derivatives from recursion formula
                 if n == m:
                     coeffs.p[m][n] = st * coeffs.p[m - 1][n - 1]

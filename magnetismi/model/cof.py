@@ -15,7 +15,7 @@ MODEL_FROM_YEAR = {y: '2020' for y in range(2020, 2025 + 1)}
 class Coefficients:
     """The WMM coefficients relevant to the year given."""
 
-    model = {}
+    model = {}  # type: ignore
 
     def load(self, model_year: int) -> None:
         """Load the model."""
