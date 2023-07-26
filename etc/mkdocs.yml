@@ -1,5 +1,7 @@
 site_name: Magnetismi
 site_description: "Magnetism (Finnish: magnetismi) - another opinionated World Magnetic Model calculator."
+docs_dir: ../docs
+site_dir: ../site
 
 theme:
   name: 'material'
