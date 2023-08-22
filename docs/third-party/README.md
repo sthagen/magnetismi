@@ -1,8 +1,8 @@
 # Third Party Dependencies
 
 <!--[[[fill sbom_sha256()]]]-->
-The [SBOM in CycloneDX v1.4 JSON format](https://git.sr.ht/~sthagen/magnetismi/blob/default/sbom/cdx.json) with SHA256 checksum ([dfa9a018 ...](https://git.sr.ht/~sthagen/magnetismi/blob/default/sbom/cdx.json.sha256 "sha256:dfa9a01827b0910d2bacc4d5295bf543876fceadb17feb7df3b329edcb267ea5")).
-<!--[[[end]]] (checksum: 3b239eccaff8856ceb1d17533e7f997a)-->
+The [SBOM in CycloneDX v1.4 JSON format](https://git.sr.ht/~sthagen/magnetismi/blob/default/etc/sbom/cdx.json) with SHA256 checksum ([0a0dfb4c ...](https://git.sr.ht/~sthagen/magnetismi/blob/default/etc/sbom/cdx.json.sha256 "sha256:0a0dfb4c6bc6bbc8e39ff3da21466033ee4157444b057293335de5219f6c3534")).
+<!--[[[end]]] (checksum: 039e7ca78370f49e021a493d7ad78bd8)-->
 ## Licenses 
 
 JSON files with complete license info of: [direct dependencies](direct-dependency-licenses.json) | [all dependencies](all-dependency-licenses.json)
