@@ -1,0 +1,63 @@
+---
+SPDXID: "SPDXRef-DOCUMENT"
+spdxVersion: "SPDX-2.3"
+creationInfo:
+  comment: "Converted from CycloneDX spec version 1.4"
+  created: "2023-08-22T18:46:50Z"
+  creators:
+  - "Tool: CycloneDX:cyclonedx-bom-3.11.2"
+  - "Tool: CycloneDX:cyclonedx-python-lib-3.1.5"
+  - "Tool: CycloneToSpdx-0.1.4"
+  licenseListVersion: "3.21"
+name: "From-Cyclone-DX"
+dataLicense: "CC0-1.0"
+annotations:
+- annotationDate: "2023-08-22T18:46:55Z"
+  annotationType: "OTHER"
+  annotator: "Tool: CycloneToSpdx"
+  comment: "MISSING_CDX_PROPERTY:extensions={}"
+documentNamespace: "https://cyclonedx/aa8b2eef-d3bc-45ad-928e-5dc2e21e9c4c_1"
+packages:
+- SPDXID: "SPDXRef-4b24e110-9621-4515-8fce-3a281aa4c789"
+  annotations:
+  - annotationDate: "2023-08-22T18:46:55Z"
+    annotationType: "OTHER"
+    annotator: "Tool: CycloneToSpdx"
+    comment: "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+  copyrightText: "NOASSERTION"
+  downloadLocation: "NOASSERTION"
+  externalRefs:
+  - referenceCategory: "PACKAGE-MANAGER"
+    referenceLocator: "pkg:pypi/pyyaml@6.0.1"
+    referenceType: "purl"
+  filesAnalyzed: false
+  licenseConcluded: "NOASSERTION"
+  licenseDeclared: "NOASSERTION"
+  name: "PyYAML"
+  primaryPackagePurpose: "LIBRARY"
+  versionInfo: "6.0.1"
+- SPDXID: "SPDXRef-f49b28ce-b2de-4364-b3be-73418204f6da"
+  annotations:
+  - annotationDate: "2023-08-22T18:46:55Z"
+    annotationType: "OTHER"
+    annotator: "Tool: CycloneToSpdx"
+    comment: "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+  copyrightText: "NOASSERTION"
+  downloadLocation: "NOASSERTION"
+  externalRefs:
+  - referenceCategory: "PACKAGE-MANAGER"
+    referenceLocator: "pkg:pypi/typer@0.9.0"
+    referenceType: "purl"
+  filesAnalyzed: false
+  licenseConcluded: "NOASSERTION"
+  licenseDeclared: "NOASSERTION"
+  name: "typer"
+  primaryPackagePurpose: "LIBRARY"
+  versionInfo: "0.9.0"
+relationships:
+- spdxElementId: "SPDXRef-DOCUMENT"
+  relationshipType: "DESCRIBES"
+  relatedSpdxElement: "SPDXRef-f49b28ce-b2de-4364-b3be-73418204f6da"
+- spdxElementId: "SPDXRef-DOCUMENT"
+  relationshipType: "DESCRIBES"
+  relatedSpdxElement: "SPDXRef-4b24e110-9621-4515-8fce-3a281aa4c789"
