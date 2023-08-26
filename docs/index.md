@@ -7,7 +7,7 @@ Magnetism (Finnish: magnetismi) - another opinionated World Magnetic Model calcu
 Third party dependencies are documented in the folder [third-party](third-party/README.md).
 
 [![version](https://img.shields.io/pypi/v/magnetismi.svg?style=flat)](https://pypi.python.org/pypi/magnetismi/)
-[![downloads](https://pepy.tech/badge/magnetismi/month)](https://pepy.tech/project/magnetismi)
+[![downloads](https://static.pepy.tech/badge/magnetismi/month)](https://pepy.tech/project/magnetismi)
 [![wheel](https://img.shields.io/pypi/wheel/magnetismi.svg?style=flat)](https://pypi.python.org/pypi/magnetismi/)
 [![supported-versions](https://img.shields.io/pypi/pyversions/magnetismi.svg?style=flat)](https://pypi.python.org/pypi/magnetismi/)
 [![supported-implementations](https://img.shields.io/pypi/implementation/magnetismi.svg?style=flat)](https://pypi.python.org/pypi/magnetismi/)
