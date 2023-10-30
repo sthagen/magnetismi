@@ -10,7 +10,7 @@ Magnetism (Finnish: magnetismi) - another opinionated World Magnetic Model calcu
 [![Version](https://img.shields.io/pypi/v/magnetismi.svg?style=flat)](https://pypi.python.org/pypi/magnetismi/)
 [![Downloads](https://static.pepy.tech/badge/magnetismi/month)](https://pepy.tech/project/magnetismi)
 [![Supported Versions](https://img.shields.io/pypi/pyversions/magnetismi.svg?style=flat)](https://pypi.python.org/pypi/magnetismi/)
-[![Maintenance Status](https://img.shields.io/github/commit-activity/y/sthagen/magnetismi.svg?style=flat)](https://git.sr.ht/~sthagen/magnetismi/log)
+[![Maintenance Status](docs/badges/downloads-per-month.svg)](https://git.sr.ht/~sthagen/magnetismi/log)
 
 ## Model
 
