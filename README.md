@@ -8,7 +8,7 @@ Magnetism (Finnish: magnetismi) - another opinionated World Magnetic Model calcu
 [![Configuration](docs/badges/configuration-sbom.svg)](https://git.sr.ht/~sthagen/magnetismi/tree/default/item/docs/third-party/README.md)
 
 [![Version](https://img.shields.io/pypi/v/magnetismi.svg?style=flat)](https://pypi.python.org/pypi/magnetismi/)
-[![Downloads](https://static.pepy.tech/badge/magnetismi/month)](https://pepy.tech/project/magnetismi)
+[![Downloads](docs/badges/downloads-per-month.svg)](https://pepy.tech/project/magnetismi)
 [![Supported Versions](https://img.shields.io/pypi/pyversions/magnetismi.svg?style=flat)](https://pypi.python.org/pypi/magnetismi/)
 [![Maintenance Status](docs/badges/commits-per-year.svg)](https://git.sr.ht/~sthagen/magnetismi/log)
 
