@@ -7,7 +7,7 @@ Magnetism (Finnish: magnetismi) - another opinionated World Magnetic Model calcu
 [![Export Classification Control Number (ECCN)](docs/badges/export-control-classification-number_eccn-ear99-neutral.svg)](https://git.sr.ht/~sthagen/magnetismi/tree/default/item/EXPORT-CONTROL-CLASSIFICATION-NUMBER)
 [![Configuration](docs/badges/configuration-sbom.svg)](https://git.sr.ht/~sthagen/magnetismi/tree/default/item/docs/third-party/README.md)
 
-[![Version](https://img.shields.io/pypi/v/magnetismi.svg?style=flat)](https://pypi.python.org/pypi/magnetismi/)
+[![Version](docs/badges/latest-release.svg)](https://pypi.python.org/pypi/magnetismi/)
 [![Downloads](docs/badges/downloads-per-month.svg)](https://pepy.tech/project/magnetismi)
 [![Supported Versions](https://img.shields.io/pypi/pyversions/magnetismi.svg?style=flat)](https://pypi.python.org/pypi/magnetismi/)
 [![Maintenance Status](docs/badges/commits-per-year.svg)](https://git.sr.ht/~sthagen/magnetismi/log)
