@@ -1,7 +1,7 @@
 {
   "magnetismi": {
-    "version": "7.3.2",
-    "timestamp": "2023-12-02T15:26:04.698089",
+    "coverage_tool_version": "7.3.2",
+    "timestamp": "2023-12-02 16:24:35 +00:00",
     "branch_coverage": true,
     "show_contexts": true,
     "covered_lines": 263,
@@ -13,6 +13,24 @@
     "num_branches": 118,
     "num_partial_branches": 7,
     "covered_branches": 85,
-    "missing_branches": 33
+    "missing_branches": 33,
+    "node_id": "c79891e5-aabf-3a83-95b9-588edcd8327f",
+    "nfiles": 5,
+    "files": [
+      "magnetismi/__init__.py",
+      "magnetismi/cli.py",
+      "magnetismi/magnetismi.py",
+      "magnetismi/model/__init__.py",
+      "magnetismi/model/cof.py"
+    ],
+    "blake3": "9664fe996ff8e3070e5e5a6ba6c50eadf356798e83352dd11158efab2faa8053",
+    "blake2": "e6530e27691cd98394fa3167fb1d9ea4bacb3e5c1f9b713a948455b551ef70e40fab3c434da27ccb1aa635003ca106279d02c1898ceaaa8e804180535342711d",
+    "sha512": "0759ec299ab9191a769a07ac41393acadc307ea0ea0e7ddf773697fa9231bda9f2b92fad1e6bc464a9f28dc932206ed8e0c6bbda742c7db1ac2981f031abfc33",
+    "sha384": "d5aba1e3aeecbcc72c0b420fba0177164f95e6397e6715c2d478e0a20efb403d3aa0d81670fbf266febf4809e15e4fb3",
+    "sha256": "f795da573f42029f6fe02bb50564799a53c5199b1d9b9d16d7593e8eb185b969",
+    "sha1": "46d45ca97afa3cb763376c02e4dba2ad0bffb1b8",
+    "md5": "82727027857c6d0d550e0a9be73caedb",
+    "python_version": "3.10.12",
+    "entropy": 4.752203
   }
 }
