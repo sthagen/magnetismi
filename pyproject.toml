@@ -7,6 +7,7 @@ name = "magnetismi"
 version = "2022.10.9"
 description = "Magnetism (Finnish: magnetismi) - another opinionated World Magnetic Model calculator."
 readme = "README.md"
+license = {file = "LICENSE"}
 authors = [{ name = "Stefan Hagen", email = "stefan@hagen.link" }]
 maintainers = [{ name = "Stefan Hagen", email = "stefan@hagen.link" }]
 classifiers = [
