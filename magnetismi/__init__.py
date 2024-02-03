@@ -1,4 +1,5 @@
 """Magnetism (Finnish: magnetismi) - another opinionated World Magnetic Model calculator."""
+
 import calendar
 import datetime as dti
 import logging

@@ -1,4 +1,5 @@
 """Adapted from C code as distributed per https://www.ngdc.noaa.gov/geomag/WMM/DoDWMM.shtml."""
+
 import argparse
 import datetime as dti
 import logging
