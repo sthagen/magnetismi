@@ -20,6 +20,7 @@
       "last_month": -1,
       "last_week": -1
     },
+    "dynamic": null,
     "home_page": "",
     "keywords": "developer-tools",
     "license": "",
@@ -36,6 +37,7 @@
       "Source-Code": "https://git.sr.ht/~sthagen/magnetismi",
       "Test-Coverage": "https://codes.dilettant.life/coverage/magnetismi"
     },
+    "provides_extra": null,
     "release_url": "https://pypi.org/project/magnetismi/2022.10.9/",
     "requires_dist": [
       "pydantic (>=1.10.2)",
