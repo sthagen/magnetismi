@@ -3,7 +3,7 @@
     {
       "category": "3.10",
       "date": "2024-04",
-      "downloads": 267
+      "downloads": 259
     },
     {
       "category": "3.10",
@@ -33,12 +33,12 @@
     {
       "category": "3.10",
       "date": "2024-10",
-      "downloads": 39
+      "downloads": 53
     },
     {
       "category": "3.11",
       "date": "2024-04",
-      "downloads": 231
+      "downloads": 223
     },
     {
       "category": "3.11",
@@ -68,12 +68,12 @@
     {
       "category": "3.11",
       "date": "2024-10",
-      "downloads": 32
+      "downloads": 40
     },
     {
       "category": "3.12",
       "date": "2024-04",
-      "downloads": 317
+      "downloads": 309
     },
     {
       "category": "3.12",
@@ -103,12 +103,12 @@
     {
       "category": "3.12",
       "date": "2024-10",
-      "downloads": 34
+      "downloads": 42
     },
     {
       "category": "3.8",
       "date": "2024-04",
-      "downloads": 226
+      "downloads": 218
     },
     {
       "category": "3.8",
@@ -138,12 +138,12 @@
     {
       "category": "3.8",
       "date": "2024-10",
-      "downloads": 32
+      "downloads": 40
     },
     {
       "category": "3.9",
       "date": "2024-04",
-      "downloads": 390
+      "downloads": 383
     },
     {
       "category": "3.9",
@@ -173,7 +173,7 @@
     {
       "category": "3.9",
       "date": "2024-10",
-      "downloads": 52
+      "downloads": 68
     },
     {
       "category": "null",
@@ -208,7 +208,7 @@
     {
       "category": "null",
       "date": "2024-10",
-      "downloads": 13
+      "downloads": 24
     }
   ],
   "package": "magnetismi",
