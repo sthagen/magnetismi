@@ -2,13 +2,8 @@
   "data": [
     {
       "category": "3.10",
-      "date": "2024-11",
-      "downloads": 50
-    },
-    {
-      "category": "3.10",
       "date": "2024-12",
-      "downloads": 311
+      "downloads": 297
     },
     {
       "category": "3.10",
@@ -33,17 +28,12 @@
     {
       "category": "3.10",
       "date": "2025-05",
-      "downloads": 244
-    },
-    {
-      "category": "3.11",
-      "date": "2024-11",
-      "downloads": 40
+      "downloads": 260
     },
     {
       "category": "3.11",
       "date": "2024-12",
-      "downloads": 254
+      "downloads": 246
     },
     {
       "category": "3.11",
@@ -68,17 +58,12 @@
     {
       "category": "3.11",
       "date": "2025-05",
-      "downloads": 244
-    },
-    {
-      "category": "3.12",
-      "date": "2024-11",
-      "downloads": 40
+      "downloads": 264
     },
     {
       "category": "3.12",
       "date": "2024-12",
-      "downloads": 256
+      "downloads": 248
     },
     {
       "category": "3.12",
@@ -103,7 +88,7 @@
     {
       "category": "3.12",
       "date": "2025-05",
-      "downloads": 267
+      "downloads": 289
     },
     {
       "category": "3.13",
@@ -122,13 +107,8 @@
     },
     {
       "category": "3.8",
-      "date": "2024-11",
-      "downloads": 41
-    },
-    {
-      "category": "3.8",
       "date": "2024-12",
-      "downloads": 253
+      "downloads": 245
     },
     {
       "category": "3.8",
@@ -153,17 +133,12 @@
     {
       "category": "3.8",
       "date": "2025-05",
-      "downloads": 232
-    },
-    {
-      "category": "3.9",
-      "date": "2024-11",
-      "downloads": 72
+      "downloads": 248
     },
     {
       "category": "3.9",
       "date": "2024-12",
-      "downloads": 516
+      "downloads": 482
     },
     {
       "category": "3.9",
@@ -188,12 +163,7 @@
     {
       "category": "3.9",
       "date": "2025-05",
-      "downloads": 477
-    },
-    {
-      "category": "null",
-      "date": "2024-11",
-      "downloads": 1
+      "downloads": 505
     },
     {
       "category": "null",
