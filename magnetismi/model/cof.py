@@ -1,6 +1,8 @@
 import importlib.resources
 import math
+import os
 import pathlib
+from typing import Any, ContextManager
 
 from magnetismi import ENCODING
 
@@ -12,6 +14,33 @@ YEARS_COVERED = tuple(y for y in range(2020, 2025 + 1))
 MODEL_FROM_YEAR = {y: '2020' for y in range(2020, 2025 + 1)}
 
 
+def _normalize_path(path: Any) -> str:
+    """Normalize a path by ensuring it is a string.
+
+    If the resulting string contains path separators, an exception is raised.
+    """
+    str_path = str(path)
+    parent, file_name = os.path.split(str_path)
+    if parent:
+        raise ValueError(f'{path!r} must be only a file name')
+    return file_name
+
+
+def _path(
+    package: importlib.resources.Package,
+    resource: importlib.resources.Resource,
+) -> ContextManager[pathlib.Path]:
+    """A context manager providing a file path object to the resource.
+
+    If the resource does not already exist on its own on the file system,
+    a temporary file will be created. If the file was created, the file
+    will be deleted upon exiting the context manager (no exception is
+    raised if the file was deleted prior to the context manager
+    exiting).
+    """
+    return importlib.resources._common.as_file(importlib.resources._common.files(package) / _normalize_path(resource))
+
+
 class Coefficients:
     """The WMM coefficients relevant to the year given."""
 
@@ -20,7 +49,7 @@ class Coefficients:
     def load(self, model_year: int) -> None:
         """Load the model."""
         model_resource = f'wmm-{model_year}.txt'
-        with importlib.resources.path(__package__, model_resource) as model_path:
+        with _path(__package__, model_resource) as model_path:
             with open(model_path, 'rt', encoding=ENCODING) as handle:
                 recs = [line.strip().split() for line in handle if line.strip() and line.strip() != TWIN_END_TOKEN]
 
