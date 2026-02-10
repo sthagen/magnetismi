@@ -6,13 +6,13 @@ from magnetismi.model import cof
 
 
 def test_coefficients_from_past_before_models_available():
-    msg = r'requested year (1234) not within (2020, 2021, 2022, 2023, 2024, 2025)'
+    msg = r'requested year (1234) not within (2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030)'
     with pytest.raises(ValueError, match=re.escape(msg)):
         cof.Coefficients(1234)
 
 
 def test_coefficients_from_future_after_models_available():
-    msg = r'requested year (9876) not within (2020, 2021, 2022, 2023, 2024, 2025)'
+    msg = r'requested year (9876) not within (2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030)'
     with pytest.raises(ValueError, match=re.escape(msg)):
         cof.Coefficients(9876)
 

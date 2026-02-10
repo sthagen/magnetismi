@@ -10,8 +10,8 @@ CS = ('n', 'm', 'gnm', 'hnm', 'dgnm', 'dhnm')
 STORE_PATH = pathlib.Path('magnetismi', 'model')
 TWIN_END_TOKEN = '9' * 48
 
-YEARS_COVERED = tuple(y for y in range(2020, 2025 + 1))
-MODEL_FROM_YEAR = {y: '2020' for y in range(2020, 2025 + 1)}
+YEARS_COVERED = tuple(y for y in range(2020, 2030 + 1))
+MODEL_FROM_YEAR = {y: '2020' if y < 2026 else '2025' for y in range(2020, 2030 + 1)}
 
 
 def _normalize_path(path: Any) -> str:
