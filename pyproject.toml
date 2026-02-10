@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "magnetismi"
-version = "2022.10.9"
+version = "2026.2.10"
 description = "Magnetism (Finnish: magnetismi) - another opinionated World Magnetic Model calculator."
 readme = "README.md"
 license = "MIT"
@@ -45,7 +45,7 @@ include = ["magnetismi", "magnetismi.model"]
 exclude = ["test*"]
 
 [tool.setuptools.package-data]
-magnetismi = ["*.txt", "*.txt.sha256", "*.txt.sha512"]
+magnetismi = ["*.txt", "*.txt.blake3", "*.txt.sha256", "*.txt.sha384", "*.txt.sha512"]
 
 [tool.black]
 line-length = 120
