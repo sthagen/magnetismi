@@ -2,7 +2,7 @@ import importlib.resources
 import math
 import os
 import pathlib
-from typing import Any, ContextManager
+from typing import Any, ContextManager, no_type_check
 
 from magnetismi import ENCODING
 
@@ -26,10 +26,8 @@ def _normalize_path(path: Any) -> str:
     return file_name
 
 
-def _path(
-    package: importlib.resources.Package,
-    resource: importlib.resources.Resource,
-) -> ContextManager[pathlib.Path]:
+@no_type_check
+def _path(package, resource) -> ContextManager[pathlib.Path]:
     """A context manager providing a file path object to the resource.
 
     If the resource does not already exist on its own on the file system,
