@@ -6,8 +6,8 @@ Versions of magnetismi currently being supported with security updates.
 
 | Version(s)  | Supported |
 |:----------- |:--------- |
-| 2026.2.10   | yes       |
-| < 2026.2.10 | no        |
+| 2026.2.11   | yes       |
+| < 2026.2.11 | no        |
 
 ## Reporting a Vulnerability
 

@@ -1,13 +1,13 @@
 name: magnetismi
 description: Magnetism (Finnish: magnetismi) - another opinionated World Magnetic Model calculator.
 license_spdx: MIT
-version: 2026.2.10
+version: 2026.2.11
 spec_version: 1.0
 home_url: https://git.sr.ht/~sthagen/magnetismi
 news_url: https://libraries.io/pypi/magnetismi/versions.atom
-date: 2026-02-10
+date: 2026-02-11
 about_resource: ./
-libraries_io_url: https://libraries.io/pypi/magnetismi?number=2026.2.10
+libraries_io_url: https://libraries.io/pypi/magnetismi?number=2026.2.11
 vcs_tool: git
 vcs_repository: https://git.sr.ht/~sthagen/magnetismi
 vcs_branch: default

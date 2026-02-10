@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "magnetismi"
-version = "2026.2.10"
+version = "2026.2.11"
 description = "Magnetism (Finnish: magnetismi) - another opinionated World Magnetic Model calculator."
 readme = "README.md"
 license = "MIT"
